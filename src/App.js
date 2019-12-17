@@ -2,7 +2,7 @@ import React from 'react'
 
 const Title = props => {
   return (
-    <p>{this.props}</p>
+    <p>{props.text}</p>
   )
 }
 
