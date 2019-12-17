@@ -1,10 +1,15 @@
 import React from 'react'
 
-function Greeting () {
+function textselect () {
   const r = Math.random(Math.random() * 3)
   if (r === 0) return <p>今日もがんばりましょう</p>
   if (r === 1) return <p>今日もがんばりましょう</p>
   if (r === 2) return <p>今日もがんばりましょう</p>
+}
+const Greeting = props => {
+  return (
+    textselect()
+  )
 }
 
 class App extends React.Component() {
@@ -15,7 +20,7 @@ class App extends React.Component() {
 
   render () {
     return (
-      <div className='App'>
+      <div>
         <Greeting />
       </div>
     )
