@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Title = props => {
-  return (
-      <h1>{props.text}</h1>
-  )
+function Greeting () {
+  const r = Math.random(Math.random() * 3)
+  if (r === 0) return <p>今日もがんばりましょう</p>
+  if (r === 1) return <p>今日もがんばりましょう</p>
+  if (r === 2) return <p>今日もがんばりましょう</p>
 }
 
 class App extends React.Component() {
@@ -15,7 +16,7 @@ class App extends React.Component() {
   render () {
     return (
       <div>
-        <Title text='helloworld!!'/>
+        <Greeting />
       </div>
     )
   }
