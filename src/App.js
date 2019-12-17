@@ -1,14 +1,19 @@
 import React from 'react'
+import './App.css'
 
-const Hello = props =>
-    <h1>{props.message}</h1>
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
 
-const App = props => {
+  render () {
     return (
-        <div>
-            <Hello message = "Hello world" />
-        </div>
+      <div className='App'>
+        <h2>等を立てるときは、まず座って費用を計算しよう</h2>
+      </div>
     )
+  }
 }
 
 export default App
