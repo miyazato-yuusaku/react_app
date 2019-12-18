@@ -1,8 +1,7 @@
 import React from 'react'
 
-
-const getGreeting = props => {
-  
+const Getgreeting = props => {
+  return (<h1>{props.value} - {props.items}</h1>)
 }
 
 class App extends React.Component() {
@@ -14,7 +13,7 @@ class App extends React.Component() {
   render () {
     return (
       <div>
-        <getGreeting value="値段は" items=1200>
+        <Getgreeting value='値段は' items='1200' />
       </div>
     )
   }
