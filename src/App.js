@@ -1,22 +1,25 @@
 import React from 'react'
 
-const getgreeting = () => {
-  const r = Math.floor(Math.random() * 3)
-  if (r === 0) return <p>今日もがんばりましょう</p>
-  if (r === 1) return <p>こんにちはj</p>
-  if (r === 2) return <p>今しう</p>
+const Greeting = props => {
+  return (
+    <div>
+      <h1>{props.value}</h1>
+        <p><img src={props.src} /></p>
+    </div>
+  )
 }
 
 class App extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {}
+    this.state = {
+    }
   }
 
   render () {
     return (
       <div>
-        <getgreeting />
+        <Greeting value='書道' src='https://original-sho.com/jetb/wp-content/uploads/2019/04/IMG_20190401_114855_261.jpg' />
       </div>
     )
   }
