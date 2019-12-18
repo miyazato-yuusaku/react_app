@@ -1,6 +1,6 @@
 import React from 'react'
 
-const getgreeting = () => {
+const Getgreeting = () => {
   const r = Math.floor(Math.random() * 3)
   if (r === 0) return <p>今日もがんばりましょう</p>
   if (r === 1) return <p>こんにちはj</p>
@@ -16,7 +16,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <getgreeting />
+        <Getgreeting />
       </div>
     )
   }
