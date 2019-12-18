@@ -1,6 +1,10 @@
 import React from 'react'
 
 
+const getGreeting = props => {
+  
+}
+
 class App extends React.Component() {
   constructor (props) {
     super(props)
@@ -9,7 +13,9 @@ class App extends React.Component() {
 
   render () {
     return (
-      <div />
+      <div>
+        <getGreeting value="値段は" items=1200>
+      </div>
     )
   }
 }
