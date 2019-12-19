@@ -1,19 +1,18 @@
 import React from 'react'
 
-class App extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
-
-  render () {
-    return (
-      <div>
-        <p>探すのに時が有り</p>
-        <p>捨てるのに時がある</p>
-      </div>
-    )
-  }
+function Greeting (props) {
+  return <h1 onClick={props.onClick}>Hello {props.name}</h1>
 }
 
-export default App
+Greeting.propTypes = {
+  name: PropTypes.string,
+  onClick: PropTypes.func
+}
+
+function handleClick () {
+  alert('クリックされました')
+}
+
+const App = <Greeting name='everyone' onClick={handleClick} />
+
+export  App
