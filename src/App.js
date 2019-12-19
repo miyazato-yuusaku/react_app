@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'propTypes'
 
 function Greeting (props) {
   return <h1 onClick={props.onClick}>Hello {props.name}</h1>
@@ -9,10 +10,6 @@ Greeting.propTypes = {
   onClick: PropTypes.func
 }
 
-function handleClick () {
-  alert('クリックされました')
-}
+const App = <Greeting name='everyone' onClick={function() {alert('click')}} />
 
-const App = <Greeting name='everyone' onClick={handleClick} />
-
-export  App
+export default App
