@@ -1,15 +1,43 @@
 import React from 'react'
-import PropTypes from 'propTypes'
 
-function Greeting (props) {
-  return <h1 onClick={props.onClick}>Hello {props.name}</h1>
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+    console.log('constructor')
+  }
+
+  componentDitMount () {
+    console.log('componentDidMount')
+  }
+
+  shouldComponentUpdate () {
+    console.log('shouldComponentUpdate')
+  }
+
+  componentDidUpdate () {
+    console.log('componentDidUpdate')
+  }
+
+  componentWillUnmount () {
+    console.log('componentWillUnmount')
+  }
+
+  render () {
+
+    console.log('render')
+    const setStateHandler = (e) => {
+      console.log('* call setState()')
+      this.setState({ r: Math.random() })
+    }
+
+    return (
+      <div>
+        <button onClick={setStateHandler}>
+          setState
+        </button>
+      </div>
+    )
+  }
 }
-
-Greeting.propTypes = {
-  name: PropTypes.string,
-  onClick: PropTypes.func
-}
-
-const App = <Greeting name='everyone' onClick={function() {alert('click')}} />
 
 export default App
